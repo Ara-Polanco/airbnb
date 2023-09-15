@@ -1,0 +1,36 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.destinos {
+
+    &__heading {
+        text-align: center
+    }
+    &__grid {
+        @include m.grid(1, v.$separacion);
+
+        @include m.tablet { 
+            @include m.grid(2, v.$separacion);
+        }
+
+        @include m.desktop {
+            @include m.grid(4, v.$separacion)
+        }
+    }
+}
+
+.destino {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   
+
+    &__imagen {
+        width: 14rem;
+    }
+
+    &__nombre,
+    &__distancia {
+        margin: 0;
+    }
+}

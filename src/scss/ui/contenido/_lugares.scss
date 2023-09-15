@@ -10,9 +10,9 @@
 
         @include m.scrollHorizontal;
 
-
         @include m.tablet { 
-            @include m.grid(2, v.$separacion)
+            @include m.grid(2, v.$separacion);
+            overflow: auto;
         }
 
         @include m.desktop { 
@@ -29,6 +29,5 @@
     &__nombre {
         font-size: 1.8rem;
     }
-    
 }
 

@@ -1,0 +1,47 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.anfitrion {
+    color: v.$blanco;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 5rem;
+
+
+    padding: v.$separacion;
+    background-image:  linear-gradient(to bottom,transparent 0%, transparent 50%, v.$negro 50%, v.$negro 100% ), url(/build/img/anfitrion.jpg);
+    background-repeat: no-repeat;
+    background-size:  100%, auto;
+    background-position: center, 60%;
+
+    @include m.tablet {
+        grid-template-rows: unset;
+        background-image: linear-gradient(to right, v.$negro 0%, v.$negro 45%, transparent 55%), url(/build/img/anfitrion.jpg);
+        background-position: center, 35%;
+        padding: 15rem 5rem ;
+    }
+
+    @include m.desktop {
+        background-position: center, 90%;
+    }
+    
+    &__contenido {
+            grid-row: 2 / 3;
+            @include m.tablet { 
+                grid-row: unset;
+                max-width: 50%;
+            }
+    }   
+
+    &__heading {
+        text-align: left;
+    }
+
+    &__texto {
+        color: v.$blanco;
+    }
+
+    &__enlace {
+        @include m.boton(v.$blanco, v.$negro);    
+    }
+}

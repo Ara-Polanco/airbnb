@@ -3,9 +3,6 @@
 
 .destinos {
 
-    &__heading {
-        text-align: center
-    }
     &__grid {
         @include m.grid(1, v.$separacion);
 

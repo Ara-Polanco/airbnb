@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.150) 0%, rgba(0, 0, 0, 0.150) 100%), url(/build/img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: v.$separacion 0 15rem 0;
+
+    &__busqueda {
+        text-align: center;
+        
+        &-label {
+            margin: 1rem 0;
+        }
+    }
+
+    &__busqueda-boton {
+        @include m.boton(v.$blanco, v.$primario)
+    }
+}

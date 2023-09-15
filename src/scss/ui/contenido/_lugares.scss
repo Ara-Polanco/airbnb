@@ -5,7 +5,7 @@
     
     &__grid {
         display: grid;
-        grid-template-columns: repeat(4, 30rem);
+        grid-template-columns: repeat(4, 90vw);
         gap: v.$separacion;
 
         @include m.scrollHorizontal;

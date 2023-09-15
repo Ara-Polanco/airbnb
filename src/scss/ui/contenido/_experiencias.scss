@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.experiencias {
+
+    &__heading{
+        margin: 3rem 0 0 0;
+    }
+    &__descripcion {
+        text-align: center;
+        margin: 1rem 0 2rem 0;
+    }
+    &__listado {
+        display: grid;
+        grid-template-columns: repeat(3, 90vw);
+        gap: v.$separacion;
+        @include m.scrollHorizontal;
+
+        @include m.tablet { 
+            @include m.grid(3, v.$separacion);
+            overflow: auto;      
+        }
+    }
+}
+
+.experiencia {
+
+    &__imagen {
+        border-radius: 1rem;
+    }
+
+    &__titulo {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    &__descripcion {
+        font-size: 1.8rem;
+    }
+
+    &__titulo,
+    &__descripcion {
+        text-align: center;
+    }
+}
